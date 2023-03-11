@@ -316,7 +316,7 @@ class RestorePasswordConfirmView(BasePasswordResetConfirmView):
 
     def form_valid(self, form):
         # Change the password
-        if request.method == 'POST:
+        if request.method == 'POST':
             form.save()
 
         messages.success(self.request, _('Your password has been set. You may go ahead and log in now.'))
